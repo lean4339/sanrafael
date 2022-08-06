@@ -1,0 +1,30 @@
+<%- include ('./header.ejs') %>
+    <div class="container">
+        <div class="row">
+
+            <table class="table col-sm-6">
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Lugar Atencion</th>
+                        <th>Sacerdote</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( let index=0; index < data.length; index++ ) { %>
+                        <tr>
+
+                            <% for( let j=0; j < data[index].length; j++ ) { %>
+                                <td>
+                                    <%= data[index][j] %>
+                                </td>
+                                <% } %>
+                        </tr>
+                        <% } %>
+
+                </tbody>
+            </table>
+        </div>
+        <a class="btn btn-primary" href="/">Atrás</a>
+    </div>
